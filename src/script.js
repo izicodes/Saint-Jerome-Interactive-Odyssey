@@ -11,64 +11,66 @@ const body = document.querySelector("body");
 const topPersonIcon = document.querySelector(".bi-person-circle");
 const mainElement = document.querySelector("main");
 
-//  ➡️ Screen variables
+//  ➡️ Screen variables 
 const LockScreen = document.querySelector("#LockScreen");
 const homeScreenHTML = `<section id="HomeScreen">
 <div class="folders">
-	<div class="folder" id="bioFolder">
+	<div class="folder hover" id="bioFolder">
 		<img src="img/folderIcon.png" alt="a folder icon">
 		<span>Biography</span>
 	</div>
-	<div class="folder">
+	<div class="folder hover">
 		<img src="img/folderIcon.png" alt="a folder icon">
 		<span>Works</span>
 	</div>
-	<div class="folder">
+	<div class="folder hover">
 		<img src="img/folderIcon.png" alt="a folder icon">
 		<span>Feast Day</span>
 	</div>
-	<div class="folder">
+	<div class="folder hover">
 		<img src="img/folderIcon.png" alt="a folder icon">
 		<span>Legacy</span>
 	</div>
-	<div class="folder">
+	<div class="folder hover">
 		<img src="img/folderIcon.png" alt="a folder icon">
 		<span>The Lion</span>
 	</div>
-	<div class="folder">
+	<div class="folder hover">
 		<img src="img/chestIcon.png" alt="a folder icon">
 		<span>Treasure</span>
 	</div>
 </div>
 </section>`;
-const biographyHTML = `<section class="myModal" data-modal="location">
-<div class="popup-header">
-	<p class="title"><i class="bi bi-star-fill"></i> Biography</p>
-	<i class="bi bi-x-lg" title="close" id="closeBtn"></i>
-</div>
-<div class="popup-body">
-	<h1>St. Jerome's Biography</h1>
-	<hr class="topBorder">
-	<img
-		src="https://www.nationalgallery.org.uk/media/33514/n-2093-00-000010-hd.jpg?cc=0.036224384185468785,0.0036690661339997925,0.058166011177811547,0.67528764714101841&width=350&height=350&rnd=132385865740500000"
-		alt="Painting of Saint Jerome by Moretto de Brescia"
-		class="myFloatLeft" />
-	<p>
-		St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
-		and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
-	</p>
-	<p>
-		St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
-		and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
-	</p>
-	<p>
-		St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
-		and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
-	</p>
-	<p>
-		St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
-		and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
-	</p>
+const biographyHTML = `<section class="overlay">
+<div class="myModal" data-modal="location">
+	<div class="popup-header">
+		<p class="title"><i class="bi bi-star-fill"></i> Biography</p>
+		<i class="bi bi-x-lg"></i>
+	</div>
+	<div class="popup-body">
+		<h1>St. Jerome's Biography</h1>
+		<hr class="topBorder">
+		<img
+			src="https://www.nationalgallery.org.uk/media/33514/n-2093-00-000010-hd.jpg?cc=0.036224384185468785,0.0036690661339997925,0.058166011177811547,0.67528764714101841&width=350&height=350&rnd=132385865740500000"
+			alt="Painting of Saint Jerome by Moretto de Brescia"
+			class="myFloatLeft" />
+		<p>
+			St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+			and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+		</p>
+		<p>
+			St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+			and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+		</p>
+		<p>
+			St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+			and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+		</p>
+		<p>
+			St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+			and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+		</p>
+	</div>
 </div>
 </section>`;
 
@@ -137,14 +139,14 @@ enterBtn.addEventListener("click", function (e) {
 	}
 });
 
-function addSection(html) {
+function addSection(html, container) {
 	// Create a temporary <div> element to hold the parsed HTML
 	const tempDiv = document.createElement("div");
 	tempDiv.innerHTML = html;
 
-	// Append the first child of the tempDiv to the mainElement
+	// Append the first child of the tempDiv to the container
 	if (tempDiv.firstChild) {
-		mainElement.appendChild(tempDiv.firstChild);
+		container.appendChild(tempDiv.firstChild);
 	}
 }
 
@@ -155,6 +157,9 @@ function searchScreenHTML() {
 
 		folders.forEach(function (folder) {
 			folder.addEventListener("click", function () {
+				// if the folder class also has the hover class
+
+
 				let id = folder.id;
 				if (id == "bioFolder") {
 					// Check if the biography section is already added
@@ -164,7 +169,7 @@ function searchScreenHTML() {
 					}, 100);
 					if (!biographySection) {
 						// Add the biographyHTML if it's not already added
-						addSection(biographyHTML);
+						addSection(biographyHTML, HomeScreen);
 					}
 				}
 			});
@@ -173,7 +178,7 @@ function searchScreenHTML() {
 }
 
 function addHomeScreen() {
-	addSection(homeScreenHTML);
+	addSection(homeScreenHTML, mainElement);
 
 	searchScreenHTML();
 }
