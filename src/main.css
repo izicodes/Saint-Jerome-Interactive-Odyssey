@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Croissant+One&family=Inter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ebe6e1;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #352009;
+  border-radius: 3px;
+  border: 0px solid #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+body {
+  background-color: #948E86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=39), auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+.container-wrapper {
+  width: 900px;
+  height: 550px;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-rows: 6% 86% 8%;
+}
+.container-wrapper header,
+.container-wrapper main,
+.container-wrapper footer {
+  display: flex;
+}
+.container-wrapper header {
+  background-color: #ebe6e1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+.container-wrapper header i {
+  font-size: 1.45rem;
+}
+.container-wrapper header i.bi-person-circle {
+  color: #8b1010;
+}
+.container-wrapper header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-wrapper header div i.bi-list {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+}
+.container-wrapper main {
+  background-image: url("https://havenlight.com/cdn/shop/products/st-jerome-and-the-lion-open-edition-print-10-x-8-only-art-800.jpg?v=1670702738&width=1200");
+  background-size: cover;
+  background-position: center top -110px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.container-wrapper main #LockScreen {
+  background-color: rgba(255, 255, 255, 0.249);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+.container-wrapper main #LockScreen .time_weather {
+  position: absolute;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+.container-wrapper main #LockScreen .time_weather #loginTime {
+  font-family: "Croissant One", cursive;
+  font-size: 2.6rem;
+}
+.container-wrapper main #LockScreen .login_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(112, 66, 14, 0.3921568627);
+  padding: 9px;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 1px solid rgba(235, 230, 225, 0.4588235294);
+  gap: 10px;
+}
+.container-wrapper main #LockScreen .login_section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-wrapper main #LockScreen .login_section .header #loginErrorMessage {
+  font-size: 0.9rem;
+}
+.container-wrapper main #LockScreen .login_section .header p {
+  font-size: 1.5rem;
+  color: #ebe6e1;
+  font-weight: bold;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.container-wrapper main #LockScreen .login_section .header button {
+  background-color: #352009;
+  color: #ebe6e1;
+  padding: 3px 5px;
+  border: 1px solid #1D0F03;
+  outline: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  -ms-transition: 250ms;
+  -o-transition: 250ms;
+}
+.container-wrapper main #LockScreen .login_section .header button:hover {
+  background-color: #B37138;
+  color: #ebe6e1;
+}
+.container-wrapper main #LockScreen .login_section .inputs {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+.container-wrapper main #LockScreen .login_section .inputs input {
+  width: 100%;
+  padding: 3px 10px;
+  outline: none !important;
+  border: 1px solid transparent;
+  font-family: "Inter", sans-serif;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=80), auto;
+}
+.container-wrapper main #HomeScreen {
+  width: 100%;
+}
+.container-wrapper main #HomeScreen .folders {
+  display: grid;
+  grid-template-columns: 20% 20%;
+  row-gap: 20px;
+  width: 50%;
+  padding-left: 10px;
+}
+.container-wrapper main #HomeScreen .folders .folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 0px;
+}
+.container-wrapper main #HomeScreen .folders .folder:hover {
+  background-color: rgba(235, 230, 225, 0.4588235294);
+}
+.container-wrapper main #HomeScreen .folders .folder img {
+  width: 67%;
+  text-align: center;
+}
+.container-wrapper main #HomeScreen .folders .folder span {
+  font-size: small;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+}
+.container-wrapper main .myModal {
+  width: 500px;
+  max-height: 300px;
+  z-index: 9999;
+  position: fixed; /* Fixed position to overlay content */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  background-color: #ebe6e1;
+  /* Allow scrolling if content exceeds the modal height */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border: 2px solid #352009;
+}
+.container-wrapper main .myModal .popup-header {
+  border-bottom: 1px solid #352009;
+  background-color: #948E86;
+  width: 100%;
+  z-index: 9999;
+  border-top-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -o-border-top-left-radius: 2px;
+}
+.container-wrapper main .myModal .popup-header p {
+  margin: 0;
+  text-align: center;
+  padding: 3px 0;
+}
+.container-wrapper main .myModal .popup-header .bi-x-lg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #352009;
+  padding: 0 3px;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+  font-size: 1.3rem;
+}
+.container-wrapper main .myModal .popup-body {
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.container-wrapper main .myModal .popup-body p {
+  font-size: 0.9rem;
+}
+.container-wrapper main .myModal .popup-body h1 {
+  text-align: center;
+  font-family: "Croissant One", cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.container-wrapper main .myModal .popup-body .topBorder {
+  background-color: #352009;
+  height: 2px;
+  border: 0 none;
+}
+.container-wrapper main .myModal .popup-body img {
+  width: 40%;
+}
+.container-wrapper main .myModal .popup-body .myFloatLeft {
+  float: left !important;
+  margin-right: 15px;
+}
+.container-wrapper footer {
+  background-color: #522D07;
+  color: #ebe6e1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-top: 1px solid #352009;
+}
+.container-wrapper footer i {
+  font-size: 1.2rem;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+  padding: 2px 7px;
+  transition: 250ms;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  -ms-transition: 250ms;
+  -o-transition: 250ms;
+}
+.container-wrapper footer i:hover {
+  background-color: rgba(235, 230, 225, 0.4588235294);
+}
+.container-wrapper footer div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container-wrapper footer div.rightHandDiv {
+  display: flex;
+  gap: 50px;
+}/*# sourceMappingURL=main.css.map */

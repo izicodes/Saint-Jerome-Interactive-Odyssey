@@ -1,0 +1,320 @@
+@import "miscs";
+
+body {
+	background-color: $NaturalGray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "Inter", sans-serif;
+	cursor: url(http://www.rw-designer.com/cursor-extern.php?id=39), auto;
+}
+
+.hide {
+	display: none !important;
+}
+
+.container-wrapper {
+	width: 900px;
+	height: 550px;
+	background-color: aliceblue;
+	display: grid;
+	grid-template-rows: 6% 86% 8%;
+
+	header,
+	main,
+	footer {
+		display: flex;
+	}
+
+	header {
+		background-color: $LightGray;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 15px;
+
+		i {
+			font-size: 1.45rem;
+
+			&.bi-person-circle {
+				color: #8b1010;
+			}
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			i.bi-list {
+				cursor: $pointer;
+			}
+		}
+	}
+
+	main {
+		background-image: url("https://havenlight.com/cdn/shop/products/st-jerome-and-the-lion-open-edition-print-10-x-8-only-art-800.jpg?v=1670702738&width=1200");
+		// background-image: url('https://sothebys-md.brightspotcdn.com/dims4/default/af509c0/2147483647/strip/true/crop/2000x1526+0+0/resize/2048x1563!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F39%2F58%2F5e2ffdac450a9c9f262155143d3e%2Fl21030-bqss9-01.jpg');
+		background-size: cover;
+		background-position: center top -110px;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+
+		#LockScreen {
+			background-color: rgba(255, 255, 255, 0.249);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			width: 100%;
+			padding: 20px;
+			position: relative;
+
+			.time_weather {
+				position: absolute;
+				top: 140px;
+				display: flex;
+				flex-direction: column;
+
+				& #loginTime {
+					font-family: "Croissant One", cursive;
+					font-size: 2.6rem;
+				}
+			}
+
+			.login_section {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				// background-color: #ffffff3c;
+				background-color: #70420e64;
+				padding: 9px;
+				backdrop-filter: blur(3px);
+				border: 1px solid $LightGrayTrans;
+				gap: 10px;
+
+				.header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					& #loginErrorMessage {
+						font-size: 0.9rem;
+					}
+
+					p {
+						font-size: 1.5rem;
+						color: $LightGray;
+						font-weight: bold;
+						margin: 0;
+						font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+					}
+
+					button {
+						background-color: $rusticBrown;
+						color: $LightGray;
+						padding: 3px 5px;
+						border: 1px solid $blackCoffee;
+						outline: none;
+						border-radius: 4px;
+						-webkit-border-radius: 4px;
+						-moz-border-radius: 4px;
+						-ms-border-radius: 4px;
+						-o-border-radius: 4px;
+						cursor: $pointer;
+
+						transition: 250ms;
+						-webkit-transition: 250ms;
+						-moz-transition: 250ms;
+						-ms-transition: 250ms;
+						-o-transition: 250ms;
+
+						&:hover {
+							background-color: $Copper;
+							color: $LightGray;
+						}
+					}
+				}
+
+				.inputs {
+					display: flex;
+					width: 100%;
+					gap: 40px;
+
+					input {
+						width: 100%;
+						padding: 3px 10px;
+						outline: none !important;
+						border: 1px solid transparent;
+						font-family: "Inter", sans-serif;
+						border-radius: 4px;
+						-webkit-border-radius: 4px;
+						-moz-border-radius: 4px;
+						-ms-border-radius: 4px;
+						-o-border-radius: 4px;
+						cursor: $text-pointer;
+					}
+				}
+			}
+		}
+
+		#HomeScreen {
+			width: 100%;
+
+			.folders {
+				display: grid;
+				grid-template-columns: 20% 20%;
+				row-gap: 20px;
+				width: 50%;
+				padding-left: 10px;
+				// background-color: aliceblue;
+
+				.folder {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					cursor: $pointer;
+					width: 100%;
+					text-align: center;
+					margin-top: 10px;
+					padding: 5px 0px;
+
+					&:hover {
+						background-color: $LightGrayTrans;
+					}
+
+					img {
+						width: 67%;
+						text-align: center;
+					}
+
+					span {
+						font-size: small;
+						width: fit-content;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		.myModal {
+			width: 500px;
+			max-height: 300px;
+			z-index: 9999;
+			position: fixed; /* Fixed position to overlay content */
+			top: 50%; /* Center vertically */
+			left: 50%; /* Center horizontally */
+			transform: translate(-50%, -50%);
+			background-color: $LightGray;
+			/* Allow scrolling if content exceeds the modal height */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-ms-border-radius: 4px;
+			-o-border-radius: 4px;
+			border: 2px solid $rusticBrown;
+
+			.popup-header {
+				border-bottom: 1px solid $rusticBrown;
+				background-color: $NaturalGray;
+				width: 100%;
+				z-index: 9999;
+				border-top-right-radius: 2px;
+				-webkit-border-top-right-radius: 2px;
+				-moz-border-top-right-radius: 2px;
+				-ms-border-top-right-radius: 2px;
+				-o-border-top-right-radius: 2px;
+				border-top-left-radius: 2px;
+				-webkit-border-top-left-radius: 2px;
+				-moz-border-top-left-radius: 2px;
+				-ms-border-top-left-radius: 2px;
+				-o-border-top-left-radius: 2px;
+
+				p {
+					margin: 0;
+					text-align: center;
+					padding: 3px 0;
+				}
+
+				.bi-x-lg {
+					position: absolute;
+					top: 0;
+					right: 0;
+					border-left: 1px solid $rusticBrown;
+					padding: 0 3px;
+					cursor: $pointer;
+					font-size: 1.3rem;
+				}
+			}
+
+			.popup-body {
+				padding: 10px;
+				max-height: 250px;
+				overflow-y: auto;
+
+				p {
+					font-size: 0.9rem;
+				}
+
+				h1 {
+					text-align: center;
+					font-family: "Croissant One", cursive;
+					font-size: 2rem;
+					margin-bottom: 15px;
+					margin-top: 5px;
+				}
+
+				.topBorder {
+					background-color: $rusticBrown;
+					height: 2px;
+					border: 0 none;
+				}
+
+				img {
+					width: 40%;
+				}
+				.myFloatLeft {
+					float: left !important;
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	footer {
+		background-color: $burntSienna;
+		color: $LightGray;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px 10px;
+		border-top: 1px solid $rusticBrown;
+
+		i {
+			font-size: 1.2rem;
+			cursor: $pointer;
+			padding: 2px 7px;
+
+			&:hover {
+				background-color: $LightGrayTrans;
+			}
+			transition: 250ms;
+			-webkit-transition: 250ms;
+			-moz-transition: 250ms;
+			-ms-transition: 250ms;
+			-o-transition: 250ms;
+		}
+
+		div {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+
+			&.rightHandDiv {
+				display: flex;
+				gap: 50px;
+			}
+		}
+	}
+}

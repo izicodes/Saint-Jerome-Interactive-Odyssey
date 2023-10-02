@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap 5.3 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"></script>
+
+		<!-- Bootstrap Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+		<!-- My CSS Styling -->
+		<link rel="stylesheet" href="src/main.css" />
+
+		<!-- Logo -->
+		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<title>Saint Jerome Interactive Odyssey</title>
+	</head>
+	<body data-current="LockScreen">
+		<div class="container-wrapper">
+			<header>
+				<i class="bi bi-person-circle" title="You have not logged in yet."></i>
+				<div>
+					<i class="bi bi-battery-half" title="Battery: 54%"></i>
+					<span id="headerDate">Friday 29th September 2023</span>
+					<i class="bi bi-list"></i>
+				</div>
+			</header>
+
+			<main>
+				<!-- This is for any popups -->
+
+				<section id="LockScreen">
+					<!-- <div class="myModal" data-modal="location">
+						<div class="popup-header">
+							<p class="title"><i class="bi bi-star-fill"></i> Biography</p>
+							<i class="bi bi-x-lg"></i>
+						</div>
+						<div class="popup-body">
+							<h1>St. Jerome's Biography</h1>
+							<hr class="topBorder">
+							<img
+								src="https://www.nationalgallery.org.uk/media/33514/n-2093-00-000010-hd.jpg?cc=0.036224384185468785,0.0036690661339997925,0.058166011177811547,0.67528764714101841&width=350&height=350&rnd=132385865740500000"
+								alt="Painting of Saint Jerome by Moretto de Brescia"
+								class="myFloatLeft" />
+							<p>
+								St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+								and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+							</p>
+							<p>
+								St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+								and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+							</p>
+							<p>
+								St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+								and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+							</p>
+							<p>
+								St. Jerome, Latin in full Eusebius Hieronymus, pseudonym Sophronius, (born c. 347, Stridon, Dalmatia—died 419/420, Bethlehem, Palestine; feast day September 30), biblical translator
+								and monastic leader, traditionally regarded as the most learned of the Latin Fathers.
+							</p>
+						</div>
+					</div> -->
+					<div class="time_weather">
+						<span id="loginTime">09:20 AM</span>
+						<span id="loginWeather">Very Sunny</span>
+					</div>
+					<form class="login_section" data-display="false">
+						<div class="header">
+							<p>Login to enter <span id="loginErrorMessage"></span></p>
+							<button role="button" id="enterBtn">Enter</button>
+						</div>
+						<div class="inputs">
+							<input type="text" id="loginUsername" placeholder="username: stjerome" required />
+							<input type="password" id="loginPassword" placeholder="password: 3009420" required />
+						</div>
+					</form>
+				</section>
+			</main>
+
+			<footer>
+				<div class="leftHandDiv">
+					<i class="bi bi-microsoft"></i>
+					<i class="bi bi-globe2"></i>
+					<i class="bi bi-search"></i>
+					<i class="bi bi-compass"></i>
+				</div>
+
+				<div class="rightHandDiv">
+					<div>
+						<i class="bi bi-chevron-up"></i>
+						<i class="bi bi-wifi"></i>
+						<i class="bi bi-person"></i>
+						<i class="bi bi-volume-mute-fill"></i>
+						<span id="footerTime">09:20 AM</span>
+					</div>
+					<div>
+						<i class="bi bi-house-fill"></i>
+						<i class="bi bi-lock" title=""></i>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Bootstrap JS Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- My JS files -->
+		<script src="src/script.js"></script>
+	</body>
+</html>

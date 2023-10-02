@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Croissant+One&family=Inter&display=swap');
+
+//  Colours
+$DeepOak: #472E10;
+$Copper: #B37138;
+$Gurkha: #999C75;
+$NaturalGray:  #948E86;
+$LightGrayTrans:  #ebe6e175;
+$LightGray:  #ebe6e1;
+$blackCoffee: #1D0F03;
+$rusticBrown: #352009;
+$burntSienna: #522D07;
+$tangerine: #70420E;
+$darkTaupe: #473C24;
+$oliveDrab: #746039;
+$pumpkinSpice: #9A571A;
+$sandstone: #9F8250;
+
+$pointer: url(http://www.rw-designer.com/cursor-extern.php?id=86), auto;
+$text-pointer: url(http://www.rw-designer.com/cursor-extern.php?id=80), auto;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Fonts
+// font-family: 'AR One Sans', sans-serif;
+// font-family: 'Croissant One', cursive;
+// font-family: 'Inter', sans-serif;
+
+/* ===== Scrollbar CSS ===== */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $LightGray;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $rusticBrown;
+    border-radius: 3px;
+    border: 0px solid #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    
+}

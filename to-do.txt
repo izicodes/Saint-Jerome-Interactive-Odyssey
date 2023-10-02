@@ -1,0 +1,35 @@
+➡️ 5 sections where the clues are
+Biography: This section provides a detailed biography of Saint Jerome, including information about his early life, education, his work on the Vulgate Bible translation, and his contributions to Christian theology. It could also include key milestones in his life.
+
+Works and Writings: In this section, users can explore Saint Jerome's significant writings and translations. It could include excerpts from his works and explanations of their historical and theological importance.
+
+Feast Day: This section highlights Saint Jerome's feast day, including its significance in the Christian calendar, customs, and traditions associated with celebrating this day. It might also include a liturgical calendar.
+
+Legacy and Influence: Here, users can discover how Saint Jerome's work has influenced Christianity, scholarship, and the preservation of knowledge throughout history. It could also touch upon his impact on libraries and librarians.
+
+St. Jerome and the Lion: In this section, users can delve into the fascinating story of Saint Jerome and his legendary encounter with a lion. This story is one of the most iconic and enduring tales associated with Saint Jerome, symbolizing various aspects of his life and character.
+
+➡️ The end quiz section
+This is where the user will collect all 5 letter clues and join them together
+Need user's name for congrats message later
+
+➡️ Prize
+Create an image to say well done for completing the treasure hunt for the clues!
+✨ Bonus: Make it shareable to social media
+
+📜 Current To-Do 📜
+- make the x on the popup make the popup delete from html ✅
+
+- Make the background of the popup be disabled/un clickable
+
+- Add background music
+    - Add the mute sound icon - <i class="bi bi-volume-mute-fill"></i>
+    - Find copyright free classical background music
+    - Mute initially
+    - when clicked change icon to volume on icon - <i class="bi bi-volume-up-fill"></i>
+
+- When you lock the screen again when already entered, delete the other sections but the LockScreen
+
+- When you open the folders, have text icons in rows for the individual sections of the information
+
+- Create photo folder icon -> merge two icons together
